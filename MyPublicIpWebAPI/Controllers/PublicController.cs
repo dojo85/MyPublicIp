@@ -17,15 +17,12 @@ namespace MyPublicIpWebAPI.Controllers
         private int _remotePort => HttpContext.Connection.RemotePort;
 
 
-        [HttpGet]
+        [HttpGet("endpoint")]
         public ActionResult<string> GetEndpoint()
         {
-            var remoteIp = HttpContext.Connection.RemoteIpAddress;
-            var remotePort = HttpContext.Connection.RemotePort;
             return Ok($"{_remoteIPAddress}:{_remotePort}");
         }
 
-        
         [HttpGet("ip")]
         public ActionResult<string> GetIP()
         {
