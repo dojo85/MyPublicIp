@@ -1,10 +1,6 @@
 name: .NET
 
 on:
-  push:
-    branches: [ master ]
-    paths:
-      - MyPublicIpWebAPI/**
   pull_request:
     branches: [ master ]
     paths:
